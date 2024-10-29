@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# QuizCraft
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+A quiz app where the user can decide the quiz topic by prompting the AI. The quizzes could be used for fun but also for practicing and studying (e.g. interview questions, exam questions etc.). Answers and questions are going to be in text based form.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It's supposed to be like a game rather than a website. Once your on the website you should be greeted and asked for a name. Afterwards you initiate the quiz with a topic and start the quiz.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* welcome screen asking for a topic
+* input field for prompting the AI
+* selector for setting the amount of questions
+* Gemini API to generate questions with 3-4 possible answers
+* give visual feedback for both wrong and right answers
+* track the amount of wrong and right answers to create some kind of score
+* visualize the results
+* offer to start another quiz when a round is finished
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+* Gemini API(Model - Gemini 1.5 Flash)
+* Vite (React)
+* React Context for state
+* Typescript
+* HTML, SCSS
+* Netlify (frontend hosting)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
