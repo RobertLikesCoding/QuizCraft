@@ -1,8 +1,6 @@
-import { config } from "dotenv";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // run the dotenv config to get the .env vars
-config();
 
 // declare the quiz result object interface
 interface QuizResult {
@@ -15,7 +13,7 @@ interface QuizResult {
 }
 
 // get the api key from .env
-const api_token: string | undefined = process.env.GEMINI_API_KEY;
+const api_token: string | undefined = import.meta.env.VITE_GEMINI_API_KEY;
 
 // if the api key is not present, throw error
 if (!api_token) {
@@ -80,7 +78,7 @@ const generateQuiz = async (numberOfQuestions: number, quizSubject: string) => {
 /**
  * A function to test the functionality of the API call
  */
-const test = async () => {
+const testQuizOutput = async () => {
     // generate a test quiz
     const testObject: QuizResult | undefined = await generateQuiz(
         3,
@@ -108,6 +106,4 @@ const test = async () => {
     }
 };
 
-test();
-
-export { generateQuiz };
+export { generateQuiz, testQuizOutput };
