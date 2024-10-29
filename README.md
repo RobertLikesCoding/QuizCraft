@@ -42,7 +42,7 @@ npm install
 ```
 3. Create a `frontend/.env` file with the following content:
 ```bash
-GEMINI_API_KEY=your_api_key
+VITE_GEMINI_API_KEY=your_api_key
 ```
 > **NOTE:**
 > You can get your API key from the [Gemini API](https://ai.google.dev/gemini-api?gad_source=1&gclid=Cj0KCQjw7Py4BhCbARIsAMMx-_IbSjSUZIg4gAbOfmaRmAoGZFWrVv53JF4zEGSwxKRBkXcLFhCidqsaAhGmEALw_wcB&authuser=1) documentation. 
