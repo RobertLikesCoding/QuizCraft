@@ -1,7 +1,10 @@
 import { config } from "dotenv";
-config();
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// run the dotenv config to get the .env vars
+config();
+
+// declare the quiz result object interface
 interface QuizResult {
     quizTitle: string;
     questions: {
@@ -11,15 +14,23 @@ interface QuizResult {
     }[];
 }
 
+// get the api key from .env
 const api_token: string | undefined = process.env.GEMINI_API_KEY;
 
+// if the api key is not present, throw error
 if (!api_token) {
     throw new Error(
         "API token is not defined. Please set GEMINI_API_TOKEN in your environment variables."
     );
 }
 
-const generateQuiz = async (numberOfQuestions: number, quizType: string) => {
+/**
+ * Function to generate a quiz based off provided parameters
+ * @param numberOfQuestions - the number of question that should be generated
+ * @param quizSubject - The subject of the quiz
+ * @returns QuizResult object
+ */
+const generateQuiz = async (numberOfQuestions: number, quizSubject: string) => {
     try {
         // register the api token with the method
         const genAI = new GoogleGenerativeAI(api_token);
@@ -28,7 +39,7 @@ const generateQuiz = async (numberOfQuestions: number, quizType: string) => {
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         // create the prompt
-        const prompt = `Create a ${quizType} quiz with ${numberOfQuestions} multiple-choice questions.
+        const prompt = `Create a ${quizSubject} quiz with ${numberOfQuestions} multiple-choice questions.
             Return only the quiz and no additional code as a JSON object in the following format :
             {
             "quizTitle": "Quiz Name",
@@ -66,7 +77,11 @@ const generateQuiz = async (numberOfQuestions: number, quizType: string) => {
     }
 };
 
+/**
+ * A function to test the functionality of the API call
+ */
 const test = async () => {
+    // generate a test quiz
     const testObject: QuizResult | undefined = await generateQuiz(
         3,
         "Passport.js"
@@ -75,6 +90,7 @@ const test = async () => {
     if (!testObject) {
         console.error("The test object is undefined");
     } else {
+        // format the quiz for readability in the console
         console.log(testObject.quizTitle);
         console.log("-----------------");
         testObject.questions.forEach((question) => {
