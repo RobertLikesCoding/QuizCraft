@@ -68,6 +68,3 @@ coverage/
 
 # Optional stylelint cache
 .stylelintcache
-
-#Ignore dist folder
-dist/
