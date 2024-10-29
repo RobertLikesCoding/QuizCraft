@@ -56,7 +56,6 @@ const generateQuiz = async (numberOfQuestions: number, quizSubject: string) => {
             ]
             }
         `;
-
         // generate the response
         const result = await model.generateContent(prompt);
 
@@ -78,11 +77,11 @@ const generateQuiz = async (numberOfQuestions: number, quizSubject: string) => {
 /**
  * A function to test the functionality of the API call
  */
-const testQuizOutput = async () => {
+const testQuizOutput = async (questionAmount: number, quizSubject: string) => {
     // generate a test quiz
     const testObject: QuizResult | undefined = await generateQuiz(
-        3,
-        "Passport.js"
+        questionAmount,
+        quizSubject
     );
 
     if (!testObject) {

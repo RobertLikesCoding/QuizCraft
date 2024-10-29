@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   useEffect(() => {
     const fetchData = async () =>{
-    await testQuizOutput();
+    await testQuizOutput(4, "Frontend Web Development");
     };
     fetchData();
   }, []);
