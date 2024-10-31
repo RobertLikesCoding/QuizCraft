@@ -7,48 +7,32 @@
 [**Component Planning**](design_docs/component_planning.md)  <br>
 [**React State Documentation**](design_docs/react_state_documentation.md)  <br>
 [**Testing Documentation**](design_docs/testing_documentation.md)<br>
-[**Design Layout Brainstorm**](design_docs/design_layout_brainstorm.md) <br>
 
 ## Table of Contents
 
 [**Technology Stack**](#technology-stack)<br>
-[**Database Schema**](#database-schema)<br>
-[**API Documentation**](#api-documentation)<br>
 [**Wireframes and Mockups**](#wireframes-and-mockups)<br>
 
 ---
 
 ## Technology Stack
+* Gemini API(Model - Gemini 1.5 Flash)
+* React with Vite
+    * React Context for state
+* Typescript
+* HTML, SCSS
 
-### Frontend
-- React (Next.js)
-- Redux (state management)
-- RTL (react testing)
-- Jest (js testing)
+### Testing
+* RTL (react testing)
+* Jest (js testing)
 
-### Backend
-<!-- - Node.js
-- Express
-    - Passport (authentication)
-    - Passport JWT (JWT authentication)
-    - Bcrypt (password hashing)
-    - Express-Validator (input validation)
-    - Oauth2-server (OAuth2)
-    - Express-session (session management)
-    - Node-postgres (PostgreSQL client)
-    - Express-session (session management)
-- Mocha (testing)
-- Chai (testing) -->
-
-### Database
-<!-- - PostgreSQL -->
 
 ### Hosting
-- Render (Full-stack hosting) or Netlify (Frontend hosting)
+- Netlify (Frontend hosting)
 
 ## Legal Documents
 
-This website should include documents. It may be beneficial to include an editor for amdin to edit these documents. The documents should include:
+This website should include documents. The documents should include:
 
 - Privacy Policy (with cookie policy)
 - Terms of Service
