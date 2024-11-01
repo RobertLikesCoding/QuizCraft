@@ -2,11 +2,12 @@
 
 # React State Design Document
 
-This document outlines the design and structure of React state management for the application. It details what data will be stored in component-level state, and what data will be elevated to React Context for global access.
-
 ## 1. Introduction
 * **Purpose:** 
 <!-- Briefly explain the purpose of this document and its intended audience. -->
+This document outlines the design and structure of React state management for the application. It details what data will be stored in component-level state, and what data will be elevated to React Context for global access.
+
+It is intended for developers working on the application to understand how state is managed and shared across components.
 * **Application Overview:** 
 <!-- Provide a high-level overview of the application, its core features, and its architecture. -->
 
