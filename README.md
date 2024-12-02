@@ -2,20 +2,16 @@
 
 ## Description
 
-A quiz app where the user can decide the quiz topic by prompting the AI. The quizzes could be used for fun but also for practicing and studying (e.g. interview questions, exam questions etc.). Answers and questions are going to be in text based form.
-
-It's supposed to be like a game rather than a website. Once your on the website you should be greeted and asked for a name. Afterwards you initiate the quiz with a topic and start the quiz.
+A fun, interactive quiz game where you choose the topic! Start by entering your name, pick a subject for the AI to generate custom questions, and dive into text-based trivia—perfect for studying or just having fun!
 
 ## Features
 
-* welcome screen asking for a topic
-* input field for prompting the AI
-* selector for setting the amount of questions
-* Gemini API to generate questions with 3-4 possible answers
-* give visual feedback for both wrong and right answers
-* track the amount of wrong and right answers to create some kind of score
-* visualize the results
-* offer to start another quiz when a round is finished
+* Interactive Welcome Screen: Sets up a customizable quiz of your choice.
+* Uses the Gemini API to create engaging questions with 3–4 possible answers.
+* Provides clear visual indicators for correct and incorrect answers.
+* countdown timer for increased difficulty
+* Results Visualization: Displays the final result in a user-friendly format.
+* Offers the ability to start a new quiz at the end of each round.
 
 
 ## Tech Stack
