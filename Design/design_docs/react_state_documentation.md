@@ -49,6 +49,6 @@ Components that are made up of multiple smaller components (compound components)
 ## Performance Considerations
 * **State Optimization:** 
   <!-- Discuss strategies for optimizing state management to ensure good performance. -->
-    * Memoization techniques (e.g., `useMemo`, `React.memo`).
+    <!-- * Memoization techniques (e.g., `useMemo`, `React.memo`).
     * Selective re-renders.
-    * Avoiding unnecessary state updates.
+    * Avoiding unnecessary state updates. -->
