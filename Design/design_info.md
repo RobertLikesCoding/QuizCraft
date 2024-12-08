@@ -3,19 +3,13 @@
 ## Quick Links
 
 [**Style Guide**](design_docs/style_guide.md) <br>
-[**Scope Document**](design_docs/scope_document.md)<br>
 [**Component Planning**](design_docs/component_planning.md)  <br>
 [**React State Documentation**](design_docs/react_state_documentation.md)  <br>
 [**Testing Documentation**](design_docs/testing_documentation.md)<br>
+<!-- [**Scope Document**](design_docs/scope_document.md)<br> -->
 
-## Table of Contents
-
-[**Technology Stack**](#technology-stack)<br>
-[**Wireframes and Mockups**](#wireframes-and-mockups)<br>
-
----
-
-## Technology Stack
+## Technology Overview
+### Tech Stack
 * Gemini API(Model - Gemini 1.5 Flash)
 * React with Vite
     * React Context for state
@@ -26,17 +20,13 @@
 * RTL (react testing)
 * Jest (js testing)
 
-
 ### Hosting
 - Netlify (Frontend hosting)
 
-## Legal Documents
+### Legal Documents
 
 This website should include documents. The documents should include:
 
 - Privacy Policy (with cookie policy)
 - Terms of Service
 
-## Security
-
-## Wireframes and Mockups
