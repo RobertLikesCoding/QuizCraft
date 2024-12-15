@@ -2,6 +2,46 @@
 
 # React Component Planning
 
+## Folder Structure
+
+### `components` folder
+
+This folder houses reusable UI components. Think of these as the building blocks of the application's user interface.   
+
+Examples: Buttons, Input fields, Modals, Navigation bars, etc.  
+
+They are often designed to be independent and composable, combine them to create more complex UI structures.
+
+### `assets` folder
+
+This is a general-purpose folder for static assets like images, fonts, icons, and stylesheets.
+
+### `containers` folder
+
+This folder is for "smart" components that are connected to the application's logic (e.g., fetching data, handling user input, updating state). They often utilize components from the components folder, interact with contexts, and utilize other containers.   
+
+Examples: A user profile page that fetches and displays user data, a product listing page that interacts with a shopping cart context.
+
+They don't typically have much (if any) DOM markup of their own, often acting as invisible wrappers.
+
+### `contexts` folder
+
+This is where you'd put the logic for React's Context API. Contexts allow you to manage and share global state across the application without manually passing props down through multiple levels of components.   
+
+Examples: User authentication status, theme preferences, shopping cart data.
+
+### `hooks` folder
+
+This folder stores custom React hooks. Hooks are functions that let you "hook into" React state and lifecycle features from functional components. They promote code reusability and help you extract component logic.   
+
+Examples: useFetch for data fetching, useLocalStorage for managing local storage.
+
+### `pages` folder
+
+This folder is specifically for organizing components that represent different pages or routes in your application, especially if you're using a routing library (like React Router).
+
+Examples: Setup page, Game page, Results page.
+
 <!-- I see the App divided in two parts: The setup and the game. In my head I feel like these could be two routes. The Setup is like a form that gets submitted. Once submitted a request is send to Gemini. So after the setup we change to the game page, which is going to have different components. Here is how I see it: -->
 
 ```
