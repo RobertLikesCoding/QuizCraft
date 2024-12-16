@@ -1,11 +1,20 @@
-const ProgressBarSymbol = ({ completed }: { completed: boolean }) => {
+interface ProgressBarSymbolProps {
+  current: boolean;
+  correct: boolean;
+  completed: boolean;
+}
+
+const ProgressBarSymbol = ({ current, correct, completed }: ProgressBarSymbolProps) => {
   return (
     <div data-testid="progressBarSymbol">
-      {completed ? ( 
+      {current ? (<p data-testid="oIcon">O</p>) :
+      completed ? 
+      correct ? ( 
         <p data-testid="checkmarkIcon">✅</p> 
       ) : (
         <p>❌</p>
-      )}
+      ) : 
+      <p data-testid="oIcon">O</p>}
     </div>
   );
 };
