@@ -135,4 +135,24 @@ This component is responsible for displaying the quiz to the user. It should hav
 
 The `GamePage` component should render the `QuestionPage` component and the `ResultsPage` component based on the current state. It does so by comparing the current question index to the total number of questions in the quiz. Once the user has answered all the questions, the `GamePage` component should render the `ResultsPage` component.
 
+### ProgressBar
+This component is a container component that displays the progress of the quiz. It will receive data about the questions and render `ProgressBarSymbol`s based on the relevant data.
 
+**State**
+
+- `questionsData`: An array of objects the contain information about the all questions in the quiz. Each object will have the following 
+
+**properties:**
+
+  - `current` (*`boolean`*): Is the current question. Will only be `true` if the question is the current question.
+  - `completed` (*`boolean`*): `true` if the question has been answered.
+  - `correct` (*`boolean`*): `true` if the question has been answered correctly and `false` if not.
+
+### ProgressBarSymbol
+This component is a presentational component that represents a single question in the quiz. It will receive data about the question and render a symbol based on the relevant data from the `ProgressBar` component.
+
+**Props**
+
+  - `current` (*`boolean`*): Is the current question. Will only be `true` if the question is the current question.
+  - `completed` (*`boolean`*): `true` if the question has been answered.
+  - `correct` (*`boolean`*): `true` if the question has been answered correctly and `false` if not.
