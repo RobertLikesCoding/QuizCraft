@@ -18,7 +18,7 @@
 
 ### Testing
 * RTL (react testing)
-* Jest (js testing)
+* Vitest (js testing)
 
 ### Hosting
 - Netlify (Frontend hosting)
