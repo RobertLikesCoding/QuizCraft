@@ -30,9 +30,9 @@ describe("ProgressBarSymbol", () => {
     const oIcon = screen.getByTestId("oIcon");
     expect(oIcon).toBeInTheDocument();
   });
-  it("should render a solid O icon when not the current prop and not completed.",() => {
+  it("should render a N icon when not the current prop and not completed.",() => {
     render(<ProgressBarSymbol current={false} correct={false} completed={false} />); // Explicitly pass current prop
-    const oIcon = screen.getByTestId("oIcon");
+    const oIcon = screen.getByTestId("notAttemptedIcon");
     expect(oIcon).toBeInTheDocument();
   });
 });
