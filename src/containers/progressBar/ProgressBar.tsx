@@ -1,15 +1,29 @@
 import ProgressBarSymbol from "../../components/progressBarSymbol/ProgressBarSymbol";
 
-
+/**
+ * Object for representing the state of a question within the quiz
+ */
 interface QuestionData {
-  current: boolean;
-  correct: boolean; 
-  completed: boolean;
+  /**
+   * Whether the symbol represents the current question
+   */
+  isCurrent: boolean;
+  /**
+   * Whether the symbol represents a correct answer
+   */
+  isCorrect: boolean; 
+  /**
+   * Whether the symbol represents a completed question
+   */
+  isCompleted: boolean;
 }
 
 
 interface ProgressBarProps {
-  questionsData?: Array<QuestionData>;
+  /**
+   * Array of question data objects
+   */
+  questionsData: Array<QuestionData>;
 };
 
 const ProgressBar = ({ questionsData }: ProgressBarProps) => {
@@ -19,9 +33,9 @@ const ProgressBar = ({ questionsData }: ProgressBarProps) => {
       {questionsData.map((questionData, index) => ( 
         <ProgressBarSymbol
           key={index}
-          current={questionData.current}
-          correct={questionData.correct} 
-          completed={questionData.completed}
+          isCurrent={questionData.isCurrent}
+          isCorrect={questionData.isCorrect} 
+          isCompleted={questionData.isCompleted}
         />
       ))}
     </div>

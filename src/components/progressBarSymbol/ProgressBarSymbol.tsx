@@ -1,20 +1,29 @@
 interface ProgressBarSymbolProps {
-  current: boolean;
-  correct: boolean;
-  completed: boolean;
+  /**
+   * Whether the symbol represents the current question
+   */
+  isCurrent: boolean;
+  /**
+   * Whether the symbol represents a correct answer
+   */
+  isCorrect: boolean;
+  /**
+   * Whether the symbol represents a completed question
+   */
+  isCompleted: boolean;
 }
 
-const ProgressBarSymbol = ({ current, correct, completed }: ProgressBarSymbolProps) => {
+const ProgressBarSymbol = ({ isCurrent, isCorrect, isCompleted }: ProgressBarSymbolProps) => {
   return (
     <div data-testid="progressBarSymbol">
-      {current ? (<p data-testid="oIcon">O</p>) :
-      completed ? 
-      correct ? ( 
+      {isCurrent ? (<p data-testid="oIcon">O</p>) :
+      isCompleted ? 
+      isCorrect ? ( 
         <p data-testid="checkmarkIcon">✅</p> 
       ) : (
         <p>❌</p>
       ) : 
-      <p data-testid="oIcon">O</p>}
+      <p data-testid="notAttemptedIcon">N</p>}
     </div>
   );
 };
