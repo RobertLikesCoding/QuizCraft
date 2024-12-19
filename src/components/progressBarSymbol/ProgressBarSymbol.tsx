@@ -14,16 +14,24 @@ interface ProgressBarSymbolProps {
 }
 
 const ProgressBarSymbol = ({ isCurrent, isCorrect, isCompleted }: ProgressBarSymbolProps) => {
+
+  /**
+   * Determines the correct symbol to display based on the props
+   * @returns The jsx element representing the symbol
+   */
+  const insertSymbol = () => {
+    if (isCurrent) {
+      return (<p data-testid="oIcon">O</p>);
+    } else if (isCompleted) {
+      return isCorrect ? (<p data-testid="checkmarkIcon">✅</p>) : <p data-testid="xIcon">❌</p>;
+    } else {
+      return (<p data-testid="notAttemptedIcon">N</p>);
+    }
+  }
+
   return (
     <div data-testid="progressBarSymbol">
-      {isCurrent ? (<p data-testid="oIcon">O</p>) :
-      isCompleted ? 
-      isCorrect ? ( 
-        <p data-testid="checkmarkIcon">✅</p> 
-      ) : (
-        <p>❌</p>
-      ) : 
-      <p data-testid="notAttemptedIcon">N</p>}
+      {insertSymbol()}
     </div>
   );
 };
