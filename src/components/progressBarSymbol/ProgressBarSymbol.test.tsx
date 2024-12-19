@@ -22,7 +22,7 @@ describe("ProgressBarSymbol", () => {
   });
   it("should render an x icon when the completed prop is false and not current", () => {
     render(<ProgressBarSymbol isCorrect={false} isCurrent={false} isCompleted={true} />); // Explicitly pass completed prop
-    const xIcon = screen.getByText("❌");
+    const xIcon = screen.getByTestId("xIcon");
     expect(xIcon).toBeInTheDocument();
   });
   it("should render an O icon when the current prop is true and not completed", () => {
