@@ -138,21 +138,20 @@ The `GamePage` component should render the `QuestionPage` component and the `Res
 ### ProgressBar
 This component is a container component that displays the progress of the quiz. It will receive data about the questions and render `ProgressBarSymbol`s based on the relevant data.
 
+This component will need to have access to the quiz data `context` to get the data about the questions. It will then use a function to convert the quiz data from the context into an array of relevant data objects for the `ProgressBarSymbol` component.
+
 **State**
 
-- `questionsData`: An array of objects the contain information about the all questions in the quiz. Each object will have the following 
-
-**properties:**
-
-  - `current` (*`boolean`*): Is the current question. Will only be `true` if the question is the current question.
-  - `completed` (*`boolean`*): `true` if the question has been answered.
-  - `correct` (*`boolean`*): `true` if the question has been answered correctly and `false` if not.
+- `questionsData`: An array of objects that contain information about all questions in the quiz. Each object will have the following: 
+  - `isCurrent` (*`boolean`*): `true` if it is the current question. Will only be `true` if the question is the current question.
+  - `isCompleted` (*`boolean`*): `true` if the question has been completed.
+  - `isCorrect` (*`boolean`*): `true` if the question has been answered correctly and `false` if not.
 
 ### ProgressBarSymbol
 This component is a presentational component that represents a single question in the quiz. It will receive data about the question and render a symbol based on the relevant data from the `ProgressBar` component.
 
 **Props**
 
-  - `current` (*`boolean`*): Is the current question. Will only be `true` if the question is the current question.
-  - `completed` (*`boolean`*): `true` if the question has been answered.
-  - `correct` (*`boolean`*): `true` if the question has been answered correctly and `false` if not.
+  - `isCurrent` (*`boolean`*): `true` if it is the current question. Will only be `true` if the question is the current question.
+  - `isCompleted` (*`boolean`*): `true` if the question has been answered.
+  - `isCorrect` (*`boolean`*): `true` if the question has been answered correctly and `false` if not.
