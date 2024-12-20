@@ -9,7 +9,7 @@ import '@testing-library/jest-dom';
 
 describe("Progress Bar",()=> {
   it("should render the ProgressBarSymbol component", () => {
-    render(<ProgressBar />); // Explicitly pass completed prop
+    render(<ProgressBar questionsData={[]}/>); // Explicitly pass completed prop
     const progressBar = screen.getByTestId("progressBar");
     expect(progressBar).toBeInTheDocument();
   });
