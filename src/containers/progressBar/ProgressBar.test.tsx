@@ -16,18 +16,18 @@ describe("Progress Bar",()=> {
   it(`should contain correct amount of progress bar symbols based on questionsData prop`, () => {
     const data = [
       {
-        current: false,
-        correct: false, 
-        completed: false,
+        isCurrent: false,
+        isCorrect: false, 
+        isCompleted: false,
       },
       {
-        current: false,
-        correct: false, 
-        completed: false,
+        isCurrent: false,
+        isCorrect: false, 
+        isCompleted: false,
       },      {
-        current: false,
-        correct: false, 
-        completed: false,
+        isCurrent: false,
+        isCorrect: false, 
+        isCompleted: false,
       },
     ];
     const dataLength = data.length;
